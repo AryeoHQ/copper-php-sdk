@@ -2,6 +2,8 @@
 
 namespace Aryeo\Copper\Resources;
 
+use Illuminate\Support\Collection;
+
 class Leads extends BaseResource
 {
     protected const PREFIX = 'leads';
@@ -25,8 +27,10 @@ class Leads extends BaseResource
 
     public function exists(string $email)
     {
-        $results = $this->search(['emails' => $email]);
-
-        return (bool) count($results);
+        return Collection::make($this->search(['emails' => $email]))
+            ->transform(fn ($lead) => [
+                'id' => $lead['id'],
+                'email' => $lead['email']['email'],
+            ]);
     }
 }
