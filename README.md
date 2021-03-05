@@ -12,7 +12,7 @@ It's used primarily in order to sync leads collected from external sources with 
 You can install the package via composer:
 
 ```bash
-composer require aryeo/copper-sdk
+composer require aryeo/copper
 ```
 
 ## Usage
