@@ -6,7 +6,7 @@ class Copper
 {
     protected CopperClient $client;
 
-    public function createClient($access_token, $user_email): self
+    public function createClient($access_token, $user_email)
     {
         $this->client = new CopperClient($access_token, $user_email);
 
