@@ -6,9 +6,11 @@ class Copper
 {
     protected CopperClient $client;
 
-    public function __construct($access_token, $user_email)
+    public function createClient($access_token, $user_email)
     {
         $this->client = new CopperClient($access_token, $user_email);
+
+        return $this;
     }
 
     public function __call($name, $arguments)

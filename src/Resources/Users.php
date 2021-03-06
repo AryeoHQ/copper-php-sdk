@@ -2,6 +2,8 @@
 
 namespace Aryeo\Copper\Resources;
 
+use Illuminate\Support\Collection;
+
 class Users extends BaseResource
 {
     protected const PREFIX = 'users';
@@ -13,6 +15,8 @@ class Users extends BaseResource
 
     public function search()
     {
-        return $this->client->post(self::PREFIX.'/search');
+        return Collection::make(
+            $this->client->post(self::PREFIX.'/search')
+        );
     }
 }
