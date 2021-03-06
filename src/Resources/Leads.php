@@ -18,11 +18,12 @@ class Leads extends BaseResource
         return $this->client->post(self::PREFIX.'/search', array_merge([
             'page_size' => 25,
             'sort_by' => 'name',
-            ], $params));
+        ], $params));
     }
 
-    public function upsert()
+    public function upsert(array $payload)
     {
+        return $this->client->put(self::PREFIX.'/upsert', $payload);
     }
 
     public function exists(string $email)
