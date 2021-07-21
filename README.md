@@ -1,7 +1,6 @@
 # Copper PHP SDK
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/aryeo/copper-sdk.svg?style=flat-square)](https://packagist.org/packages/aryeo/copper-sdk)
-[![Quality Score](https://img.shields.io/scrutinizer/g/aryeo/copper-sdk.svg?style=flat-square)](https://scrutinizer-ci.com/g/aryeo/copper-sdk)
 [![Total Downloads](https://img.shields.io/packagist/dt/aryeo/copper-sdk.svg?style=flat-square)](https://packagist.org/packages/aryeo/copper-sdk)
 
 This package provides a PHP SDK for interacting with the [Copper CRM API](https://developer.copper.com/index.html).
@@ -12,7 +11,7 @@ It's used primarily in order to sync leads collected from external sources with 
 You can install the package via composer:
 
 ```bash
-composer require aryeo/copper
+composer require aryeo/copper-sdk
 ```
 
 ## Usage
@@ -33,22 +32,9 @@ $client->users()->search();
 composer test
 ```
 
-### Changelog
-
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
-
 ## Contributing
 
 Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
-
-### Security
-
-If you discover any security related issues, please email yaz@aryeo.com instead of using the issue tracker.
-
-## Credits
-
-- [Yaz Jallad](https://github.com/ninjaparade)
-- [All Contributors](../../contributors)
 
 ## License
 
